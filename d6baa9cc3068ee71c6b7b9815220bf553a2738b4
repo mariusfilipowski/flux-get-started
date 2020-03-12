@@ -1,0 +1,1 @@
+{"jobID":"df92b28c-ad94-b515-d529-2088ac2500d9","spec":{"type":"policy","cause":{"Message":"","User":"Marius Filipowski \u003cmarius.filipowski@itergo.com\u003e"},"spec":{"demo:deployment/podinfo":{"add":{"tag_all":"glob:1.4.*"},"remove":{}}}},"result":null}
