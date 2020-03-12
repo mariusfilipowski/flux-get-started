@@ -8,8 +8,8 @@ metadata:
     app: podinfo
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.init: regex:^3.10.*
-    fluxcd.io/tag.podinfod: semver:~3.1
+    fluxcd.io/tag.init: glob:1.4.*
+    fluxcd.io/tag.podinfod: glob:1.4.*
 spec:
   strategy:
     rollingUpdate:
@@ -56,10 +56,10 @@ spec:
         - --random-delay=false
         - --random-error=false
         env:
-          - name: PODINFO_UI_COLOR
-            value: "#34577c"
-          - name: PODINFO_UI_MESSAGE
-            value: "Hello world!"
+        - name: PODINFO_UI_COLOR
+          value: "#34577c"
+        - name: PODINFO_UI_MESSAGE
+          value: "Hello world!"
         livenessProbe:
           httpGet:
             path: /healthz
